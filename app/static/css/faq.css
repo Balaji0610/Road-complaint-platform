@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: seashell;
+}
+
+.container {
+    padding-bottom: 20px;
+}
+
+.container .head-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0px 70px 0px 20px;
+}
+
+.container .head-container h3 {
+    font-size: 25px;
+    color: #142e82;
+    font-weight: bold;
+}
+
+.container .head-container a {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    padding-left: 3px;
+    color: #142e82;
+}
+
+.container .head-container .search-box {
+    /*height: 50px;*/
+    display: flex;
+    /*
+    cursor: pointer;
+    padding: 10px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);*/
+}
+
+/*
+.container .head-container .search-box input {
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}*/
+.container .head-container .search-box input {
+    width: 0;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    height: 40px;
+    font-size: 15px;
+    outline: 0;
+    border: none;
+    border-bottom: 1px solid transparent; /* Hide the underline */
+    background: none;
+    color: #4661b8;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.container .head-container .search-box:hover input {
+    width: 300px;
+    border-bottom: 1px solid; /* Show the underline on hover */
+}
+
+.faq {
+    max-width: 1080px;
+    margin: 20px;
+    padding-right: 34px;
+}
+
+.faq .question {
+    border-bottom: 1px solid #000;
+}
+
+.faq .question button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: seashell; 
+    color: #142e82;
+    cursor: pointer;
+    font-size: 25px;
+    width: 100%;
+    padding: 20px 0px;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.faq button h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.faq button i {
+    transition: transform 0.3s ease-in ;
+}
+
+.faq .answer {
+    background-color: seashell; 
+    max-height: 0;
+    opacity: 0;
+    line-height: 1.4;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq .answer p {
+    color: #142e82;
+    font-size: 15px;
+}
+
+.question .answer.show {
+    max-height: 200px; 
+    opacity: 1;
+    padding: 10px 0px;
+}
+
+.faq button i.rotate{
+    transform: rotate(180deg);
+}
+
+/*.faq .active {border: none;}
+
+.faq .answer {
+    max-height: 0;
+    transition: max-height 1.4s ease;
+}*/
+
+.highlight {
+    background-color: yellow;
+}
+
+
+@media screen and (max-width: 1030px) {
+    .container .head-container {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    .container .head-container h3 {
+        text-align: center;
+    }
+
+    .container .head-container .search-box {
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .container .head-container .search-box input {
+        width: 400px;
+    }
+
+    .faq {
+        margin: 0;
+        padding: 0;
+    }
+
+    .faq .question button {
+        font-size: 18px;
+    }
+
+    .faq button h4 {
+        font-size: 18px;
+    }
+
+    .faq .answer p {
+        font-size: 16px;
+        padding: 0px 10px;
+    }
+}

@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.info {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    /*margin: 30px 100px 30px 200px;*/
+    margin-top: 30px;
+    margin-left: 200px;
+    margin-bottom: 30px;
+    padding: 0px 40px;
+}
+/*
+.info .details-line {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.info .details-line .report-details {
+    width: 500px;
+}
+
+.report-details {
+    display: inline-flex;
+    align-items: baseline;
+    font-size: 16px;
+}
+
+.report-details h4 {
+    margin: 0px 15px;
+}
+*/
+
+.tbl-box {
+    border: 0px;
+    border-radius: 10px;
+    padding: 0px 20px;
+    background-color: #DBDBDB;
+}
+
+table {
+    width: 100%;
+    margin: 0;
+}
+
+table tr {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid;
+}
+
+table tr:last-child {
+    border-bottom: 0px;
+}
+
+table th {
+    width: 11%;
+    color: #162B6F;
+}
+
+table td {
+    text-align: left;
+    width: 90%;
+    color: #324158;
+    padding-right: 20px;
+    margin-right: 10px;
+}
+
+table tr button {
+    margin-right: 50px;
+    width: 120px;
+    height: 40px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #4682B4;
+    color: #fff;
+}
+
+table tr button:hover {
+    background-color: #8EA0CD;
+}
+
+.msg {
+    display: flex;
+    margin: 15px 10px 5px;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.btn-box #approve {
+    background-color: #6ECF5A;
+    color: #fff;
+    border-radius: 50px;
+    border: 0px;
+    padding: 10px;
+    width: 130px;
+}
+
+.btn-box #approved {
+    background-color: #6ECF5A;
+    color: #fff;
+    border-radius: 50px;
+    border: 0px;
+    padding: 10px;
+    width: 130px;
+}
+
+.btn-box #approved i {
+    font-size: 18px;
+}
+
+.btn-box #approve:hover, #approved:hover {
+    background-color: #5d9652;
+}
+
+.btn-box #print {
+    background-color: #FD1117;
+    opacity: 80%;
+    color: #fff;
+    border-radius: 50px;
+    border: 0px;
+    padding: 10px;
+    width: 130px;
+}
+
+.btn-box #print:hover {
+    background-color: #E21C21;
+}
+
+/*
+table td {
+    display: inline-flex;
+    align-items: baseline;
+    font-size: 16px;
+    border: 1px solid;
+}
+
+table td p {
+    font-size: 15px;
+    margin-left: 15px;
+}

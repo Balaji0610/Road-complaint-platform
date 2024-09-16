@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: seashell;
+}
+
+.content-container {
+    padding: 2px 90px;
+}
+
+.fields {
+    display: block;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 30px;
+}
+
+.fields .input-field {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.fields .input-field label {
+    margin-bottom: 10px;
+    color: #583700;
+}
+
+.fields .input-field select {
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #a9a9a9;
+    border-radius: 10px;
+    background-color: #db9421b1;
+    color: #583700;
+}
+
+.fields .input-field select:focus option {
+    background-color: #97630F;
+}
+
+.fields .input-field select option:hover {
+    background-color: #db9421b1;
+}
+
+.fields .input-field select option {
+    color: #ffd702;
+    transition: 0.3s;
+}
+
+.fields .input-field input, textarea {
+    outline: none;
+    border: 1px solid #a9a9a9;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #db9421b1;
+    color: #583700;
+}
+
+.fields .input-field input::placeholder {
+    color: #583700;
+}
+
+.fields .location-content {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.fields .input-field iframe {
+    width: 840px;
+    height: 300px;
+}
+
+.fields .input-field button, .button-field button {
+    width: 200px;
+    height: 40px;
+    border: 1px solid #a9a9a9;
+    border-radius: 10px;
+    background-color: #142e82;
+    color: #fff;
+}
+
+.fields .button-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-field button:hover {
+    background-color: #97630F;
+}
+
+@media screen and (max-width: 1030px) {
+    .fields {
+        display: block;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .fields .input-field {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .fields .input-field select {
+        width: 210px;
+        height: 40px;
+    }
+
+    .fields .input-field input {
+        width: 210px;
+        height: 40px;
+    }
+
+    .fields .location-content {
+        display: block;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .fields .input-field iframe {
+        width: 210px;
+        height: 150px;
+    }
+
+    .fields .button-field {
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha383-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg3Va+PmSTsz/K68vbdEjh3u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha383-rHyoN1iRsVXV3nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX3TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{% static 'css/faq.css' %}">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+            $('#header').load("header");
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="head-container">
+            <h3>Frequently Asked Questions</h3>
+            <div class="search-box">
+                <input type="text" placeholder="Search" id="searchInput" name="searchBar">
+                <a href="javascript:void(0);" onclick="searchBtn()"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="question">
+                <button>
+                    <h4>What can I complain in this platform?</h4>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="answer">
+                    <p>This platform only accept complains about road condition across Malaysia.</p>
+                </div>
+            </div>
+            <div class="question">
+                <button>
+                    <h4>Can I make an anonymous complain?</h4>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="answer">
+                    <p>Yes. Submitting a complain does not required an account login.</p>
+                </div>
+            </div>
+            <div class="question">
+                <button>
+                    <h4>What will happen to my complaint?</h4>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="answer">
+                    <p>Your complaint will be reviewed by the authorities and actions will be taken. By providing complete information, it will help the reviewing process.</p>
+                </div>
+            </div>
+            <div class="question">
+                <button>
+                    <h4>What should I include in the complaint?</h4>
+                    <i class="fa-solid fa-angle-down"></i>
+                </button>
+                <div class="answer">
+                    <p>Your complaint should contain enough and sufficient information to help the reviewing process. We encourage you to provide the road image to help the investigation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{% static 'javaScript/faq.js' %}"></script>
+</body>
+</html>
+

@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FYP</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha383-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg3Va+PmSTsz/K58vbdEjh3u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha383-rHyoN1iRsVXV3nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC5xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX3TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{% static 'css/summary.css' %}">
+    <link rel="stylesheet" href="{% static 'css/message.css' %}">
+    <script src="{% static 'javaScript/message.js' %}"></script>
+    <script src="{% static 'javaScript/receipt.js' %}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha255-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(function() {
+            $('#header').load("/header");
+        });
+        // $(function() {
+        //    $('#popup').load("message.html");
+        // });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+    
+    <div class="details-content">
+        <div class="title">
+            <h3>Review your details:</h3>
+            
+        </div>
+
+        <table>
+            <tr>
+                <th><h4><b>Type of road:</b></h4></th>
+                <td id="road">{{ store.road }}</td>
+            </tr>
+            <tr>
+                <th><h4><b>Subject:</b></h4></th>
+                <td id="subject">{{ store.subject }}</td>
+            </tr>
+            <tr>
+                <th><h4><b>Details:</b></h4></th>
+                <td id="details"> {{ store.details }}</td>
+            </tr>
+            <tr>
+                <th><h4><b>Location:</b></h4></th>
+                <td id="location">{{ store.location }}</td>
+            </tr>
+            <tr>
+                <th><h4><b>State:</b></h4></th>
+                <td id="state">{{ store.state }}</td>
+            </tr>
+            <tr>
+                <th><h4><b>City:</b></h4></th>
+                <td id="city"> {{ store.city }}</td>
+            </tr>
+            <tr>
+                <th><h4><b>Postal code:</b></h4></th>
+                <td id="pCode">{{ store.pCode }}</td>
+            </tr>
+            <tr>
+                <th><h4><b>Email:</b></h4></th>
+                <td id="email"> {{ store.email }}</td>
+            </tr>
+            <tr>
+                <th><h4><b>Image:</b></h4></th>
+                <td id="image"><img src="{{ store.image }}" alt="image" width="350px" height="300px"></td>
+                <!--<td id="image"><button type="submit">Upload images</button></td>-->
+            </tr>
+            <tr>
+                <th><h4><b>ML result</b></h4></th>
+                <td id="ml_res"> {{ store.ml_res }}</td>
+            </tr>
+
+        </table>
+        
+        
+        <div class="button-field">
+            <div class="back-btn">
+                <button type="button" onclick="history.back()">Back</button>
+            </div>
+
+            <div class="confirm-button" >
+                <form id="form_submit">
+                    <input type="hidden" name="road" value=" {{ store.road }}">
+                    <input type="hidden" name="subject" value=" {{ store.subject }}">
+                    <input type="hidden" name="details" value=" {{store.details }}">
+                    <input type="hidden" name="location" value=" {{ store.location }}">
+                    <input type="hidden" name="state" value=" {{ store.state }}">
+                    <input type="hidden" name="city" value=" {{ store.city }}">
+                    <input type="hidden" name="pCode" value=" {{ store.pCode }}">
+                    <input type="hidden" name="email" value=" {{ store.email }}">
+                    <input type="hidden" name="image" value="{{store.image}}">
+                    <input type="hidden" name="ml_res" value=" {{ store.ml_res }}">
+                    <button type="button" onclick="addData()">Confirm</button>
+                </form>
+                
+                <div id="popup"></div>
+            </div>
+        </div>
+    </div>
+
+ 
+</body>
+</html>

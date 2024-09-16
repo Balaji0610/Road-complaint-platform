@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.box-container {
+    position: absolute;
+    left: 200px;
+    margin: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.box-container .box {
+    margin: 30px;
+    padding: 50px 20px;
+    width: 280px;
+    height: 230px;
+    border: 0px;
+    text-align: center;
+    color: #162B6F;
+}
+
+.box-container .box h4 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.box-container .box p {
+    font-size: 28px;
+    font-weight: bold;
+}

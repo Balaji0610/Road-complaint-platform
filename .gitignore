@@ -1,0 +1,7 @@
+.venv
+./app/__pycache__
+./app/static/img/user_image/*
+*/__pycache__
+*/*/__pycache__
+*/*/img
+*.sqlite3
